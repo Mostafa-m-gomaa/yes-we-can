@@ -1,0 +1,30 @@
+.who {
+  padding: 150px 0;
+}
+.who .head {
+  display: flex;
+  width: 90%;
+  border: 10px solid var(--other-color);
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .who .head {
+    flex-direction: column;
+  }
+}
+.who .head img {
+  width: 20%;
+}
+.who .head div {
+  text-align: center;
+  width: 60%;
+  font-size: 30px;
+  color: var(--my-color);
+}
+.who .container {
+  text-align: center;
+}/*# sourceMappingURL=who.css.map */

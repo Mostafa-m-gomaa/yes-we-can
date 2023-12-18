@@ -1,0 +1,29 @@
+@import "../helpers/mixins";
+.who{
+    padding: 150px 0;
+    .head{                  
+        display: flex;
+        width: 90%;
+        border: 10px solid var(--other-color);
+        border-radius: 10px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        margin: 0 auto;
+        @include media(mopile){
+          flex-direction: column
+                     };
+        img{
+            width: 20%;
+        }
+        div{
+            text-align: center;
+            width: 60%;
+            font-size: 30px;
+            color: var(--my-color);
+        }
+    }
+  .container{
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+.raters-cond {
+  width: 100%;
+  padding: 100px 0 80px 0;
+}
+.raters-cond .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.raters-cond .container h1 {
+  background-color: var(--my-color);
+  padding: 10px 0;
+  color: white;
+  border-radius: 10px;
+}
+.raters-cond .container a {
+  background-color: var(--my-color);
+  color: white;
+  padding: 5px 20px;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+}/*# sourceMappingURL=raters-cond.css.map */

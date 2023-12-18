@@ -1,0 +1,53 @@
+@import "../helpers/mixins";
+.sign-up{
+    height: 100vh;
+    width: 100%;
+  
+    .container{
+        @include media(mopile){
+            border: 1px solid;
+            border-radius: 15px;
+                    }
+         form{
+            width: 36%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+            border: 4px solid var(--my-color);
+            border-radius: 10px;
+            margin: 100px auto;
+            @include media(mopile){
+                width: 100%;
+                border-radius: 20px;
+                        }
+                        label{
+                            display: flex;
+                            flex-direction: column;
+                            gap : 9px;
+                            text-align: center;
+                        }
+            input{
+                width: 60%;
+                margin: 0 auto;
+                text-align: center;
+
+                height: 30px;
+                background-color: rgb(197, 190, 190);
+             
+            }
+            button{
+                width: 40%;
+                margin: 0 auto ;
+                padding: 15px;
+                background-color:  rgb(92, 92, 255);
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+                border: none;
+                font-size: 20px;
+            }
+        
+        }
+    }
+}
