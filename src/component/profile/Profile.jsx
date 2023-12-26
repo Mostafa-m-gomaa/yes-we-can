@@ -26,7 +26,7 @@ const Example = () => {
     sessionStorage.setItem("full",false)
     fetch(`${route}/answer/getUserAnswersReportTotal/${localStorage.getItem("userId")}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+        Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())
@@ -87,7 +87,7 @@ const ExampleRater = () => {
     sessionStorage.setItem("fulla",false)
     fetch(`${route}/answer/getUserAnswersReportTotal/${localStorage.getItem("userId")}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+       Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())
@@ -289,7 +289,7 @@ const [showFullReport,setShowFullReport]=useState(false)
     setExNum(status)
     fetch(`${route}/answer/getUserAnswers/${localStorage.getItem("userId")}/${num}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+       Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())
@@ -308,7 +308,7 @@ const [showFullReport,setShowFullReport]=useState(false)
  setKeyName(name)
     fetch(`${route}/answer/getUserAnswersReport/${id}/${localStorage.getItem("userId")}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+       Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())
@@ -330,7 +330,7 @@ const [showFullReport,setShowFullReport]=useState(false)
     setLoader(true)
     fetch(`${route}/answer/getUserAnswersReportTotal/${localStorage.getItem("userId")}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+        Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())
@@ -374,7 +374,7 @@ const [showFullReport,setShowFullReport]=useState(false)
     
     fetch(`${route}/answer/getUserAnswersReportTotal/${localStorage.getItem("userId")}`, {
       headers: {
-        "Authorization" :`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZlMTcwMGVjZTEwNTI4NDkxZTRmNmQiLCJpYXQiOjE2OTUzMjQxODYsImV4cCI6MTcwMzEwMDE4Nn0.ydQBflW4_4DgFb0pNwiKEBaq1QRYgMWxvuOyiLMKcLA`
+        Authorization :`Bearer ${localStorage.getItem("token")}`
       }
     })
     .then(res=>res.json())

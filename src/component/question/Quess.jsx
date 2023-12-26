@@ -106,7 +106,7 @@ const Quess = () => {
               })
             })
             .then(res=>res.json())
-            console.log(response)
+          
             setLoader(false)
             if (response.status === "success") {
               toast.success(response.message)
@@ -132,10 +132,16 @@ const Quess = () => {
         .then(res=>res.json())
         .then(data=>{
           console.log(data)
-          if(data.questions){
-            setQues(data.questions)
+          if(data.questions && Array.isArray(data.questions)){
+            setQues(data.questions) }
+            else if(data.questions.length === 0){
+              toast.error("لا يوجد اسئلة للتقييم")
        
-          }
+            }
+            else if(Array.isArray(data.questions) === false){
+              toast.error("لا يوجد اسئلة للتقييم")
+       
+            }
         })
       },[])
   return (
