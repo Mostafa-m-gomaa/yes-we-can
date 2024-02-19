@@ -1,5 +1,14 @@
 import'./profile.css'
 import React, { useContext, useState ,useRef,useEffect ,} from 'react'
+import first from '../../assets/one.png'
+import two from '../../assets/two.png'
+import three from '../../assets/three.png'
+import four from '../../assets/four.png'
+import five from '../../assets/five.png'
+import nine from '../../assets/nine.png'
+import ten from '../../assets/ten.png'
+import kes from '../../assets/keys.png'
+import slook from '../../assets/slook.png'
 import { PureComponent } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import App, { AppContext } from '../../App'
@@ -205,53 +214,80 @@ const [showFullReport,setShowFullReport]=useState(false)
       doc.addFileToVFS('alfont_com_arial-1.ttf', font);
       doc.addFont('alfont_com_arial-1.ttf', 'alfont_com_arial-1', 'normal');
       doc.setFont("alfont_com_arial-1");
-      // const text = 'التقرير الجمعي لمقياس';
-      // doc.addImage(border, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
-      // doc.setFontSize(40);
-      // doc.text(text , 90, 50 );
-      // doc.addImage(logo, 'JPEG' , 80,90,120,30)
-      // doc.setFontSize(30);
-      // doc.text(`قياس أثر البرنامج `, 105, 160);
-      // doc.setFontSize(25);
-      // doc.text(`مجموعة بناء`, 117, 190);
+     
 
-      doc.addImage(screen, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      // doc.addImage(screen, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addImage(first, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addPage();
+      doc.addImage(two, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addPage();
+      doc.addImage(three, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addPage();
+      doc.addImage(four, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addPage();
+      doc.addImage(five, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
     
-      fullReport.forEach((tableData, index) => {
-        // if (index !== 0) {
-        //   doc.addPage();
-        // }
-        doc.addPage();
-        doc.addImage(border, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
-        doc.addImage(logo, 'JPEG' , 10,10,40,15)
-        doc.setFontSize(20);
-        doc.setTextColor(232, 234, 237, 1.00);
-        doc.text(`: ${tableData.key}`, 210, 50);
-        doc.text(`: ${tableData.key}`, 210, 100);
+      // fullReport.forEach((tableData, index) => {
+      //   // if (index !== 0) {
+      //   //   doc.addPage();
+      //   // }
+      //   doc.addPage();
+      //   // doc.addImage(border, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      //   doc.addImage(logo, 'JPEG' , 10,10,40,15)
+      //   doc.setFontSize(20);
+      //   doc.setTextColor(232, 234, 237, 1.00);
+      //   doc.text(`: ${tableData.key}`, 210, 50);
+      //   doc.text(`: ${tableData.key}`, 210, 100);
     
     
-        doc.autoTable({
-          html: `#sayed${index}`,
-          styles: {
-            font: 'alfont_com_arial-1', // Set the font to the Arabic font
-            fontSize: 13, // Adjust the font size as needed
-            valign: 'middle', // Center vertically
-            halign: 'center', // Center horizontally
-          },
-          theme:"grid",
-          startY: 120
-        });
-        doc.autoTable({
-          html: `#small${index}`,
-          styles: {
-            font: 'alfont_com_arial-1', // Set the font to the Arabic font
-            fontSize: 11, // Adjust the font size as needed
-            valign: 'middle', // Center vertically
-            halign: 'center', // Center horizontally
-          },
-          theme:"grid",
-          startY: 60
-        });
+      //   doc.autoTable({
+      //     html: `#sayed${index}`,
+      //     styles: {
+      //       font: 'alfont_com_arial-1', // Set the font to the Arabic font
+      //       fontSize: 13, // Adjust the font size as needed
+      //       valign: 'middle', // Center vertically
+      //       halign: 'center', // Center horizontally
+      //     },
+      //     theme:"grid",
+      //     startY: 120
+      //   });
+      //   doc.autoTable({
+      //     html: `#small${index}`,
+      //     styles: {
+      //       font: 'alfont_com_arial-1', // Set the font to the Arabic font
+      //       fontSize: 11, // Adjust the font size as needed
+      //       valign: 'middle', // Center vertically
+      //       halign: 'center', // Center horizontally
+      //     },
+      //     theme:"grid",
+      //     startY: 60
+      //   });
+      // });
+      doc.addPage();
+      doc.addImage(kes, 'JPEG' , 0,0,doc.internal.pageSize.getWidth(),60)
+      doc.autoTable({
+        html: `#first`,
+        styles: {
+          font: 'alfont_com_arial-1', // Set the font to the Arabic font
+          fontSize: 11, // Adjust the font size as needed
+          valign: 'middle', // Center vertically
+          halign: 'center', // Center horizontally
+        },
+        theme:"grid",
+        startY: 100
+      });
+      doc.addPage();
+      doc.addImage(slook, 'JPEG' , 0,10,doc.internal.pageSize.getWidth(),60)
+      doc.autoTable({
+        html: `#sayed`,
+        styles: {
+          font: 'alfont_com_arial-1', // Set the font to the Arabic font
+          fontSize: 11, // Adjust the font size as needed
+          valign: 'middle', // Center vertically
+          halign: 'center', // Center horizontally
+        },
+        theme:"grid",
+        startY: 100
       });
   
       
@@ -259,6 +295,11 @@ const [showFullReport,setShowFullReport]=useState(false)
       doc.addImage(logo, 'JPEG' , 5,5,40,15)
       // doc.text("مقياس نعم أستطيع", 130, 35);
       doc.addImage(screenshotImage , 'JPEG' , 5,20 , 220 , 250)
+      doc.addPage();
+      doc.addImage(nine, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+      doc.addPage();
+      doc.addImage(ten, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+    
        doc.save("mypddf.pdf");
  
     });
@@ -513,7 +554,7 @@ const [showFullReport,setShowFullReport]=useState(false)
           <div className="over" onClick={()=>setShowFullReport(false)}></div>
           <div className="in-full">
 <h1>التقرير المجمع</h1>
-            {fullReport.map((rep,index)=>{
+            {/* {fullReport.map((rep,index)=>{
               return(
                 <div className="table" key={index}>
                   <h2>{rep.key}</h2>
@@ -563,7 +604,84 @@ const [showFullReport,setShowFullReport]=useState(false)
       </table>
                 </div>
               )
+            })} */}
+                   <div className="table" >
+                  <h2>نتائج المقارنة لمفاتيح النجاح</h2>
+                  <table id={`first`} >
+        <thead>
+          <tr>
+            {/* <th> فرق المقيمين</th>
+            <th> فرق الذاتي</th> */}
+           
+            <th> متوسط تقييم الأخرين بعد</th>
+            <th>تقييم ذاتي بعد</th>
+            <th> متوسط تقييم الأخرين قبل</th>
+            <th>تقييم ذاتي قبلي</th>
+            <th>المفاتيح</th>
+          </tr>
+        </thead>
+            {fullReport.map((rep,index)=>{
+              return(
+         
+        <tbody>
+       
+            <tr key={index}>
+              {/* <td>{item.avg.raters }</td>
+              <td>{ item.avg.user}</td> */}
+              <td>{rep.graph.raterAfter}</td>
+              <td>{rep.graph.userAfter}</td>
+              <td>{rep.graph.raterBefore}</td>
+              <td>{rep.graph.userBefore}</td>
+              <td>{rep.key}</td>
+            </tr>
+         
+        </tbody>
+      
+    
+             
+              )
             })}
+            </table>
+            </div>
+                   <div className="table" >
+                  <h2>نتائج المقارنة لأبرز سلوكيات مفاتيح النجاح</h2>
+                  <table id={`sayed`} >
+        <thead>
+          <tr>
+            {/* <th> فرق المقيمين</th>
+            <th> فرق الذاتي</th> */}
+            <th> متوسط تقييم الأخرين بعد</th>
+            <th>تقييم ذاتي بعد</th>
+            <th> متوسط تقييم الأخرين قبل</th>
+            <th>تقييم ذاتي قبلي</th>
+            <th>عنصر النجاح</th>
+            <th>السلوك</th>
+          </tr>
+        </thead>
+            {fullReport.map((rep,index)=>{
+              return(
+         
+        <tbody>
+          {rep.questions.map((item, index) => (
+            <tr key={index}>
+              {/* <td>{item.avg.raters }</td>
+              <td>{ item.avg.user}</td> */}
+              <td>{item.after.raters}</td>
+              <td>{item.after.user}</td>
+              <td>{item.before.raters}</td>
+              <td>{item.before.user}</td>
+              <td>{rep.key}</td>
+              <td>{item.question}</td>
+            </tr>
+          ))}
+        </tbody>
+      
+    
+             
+              )
+            })}
+            </table>
+            </div>
             
 <div className="graph" id="element">
 <div className='grapgh-title'>مقياس نعم أستطيع (ذاتي)</div>

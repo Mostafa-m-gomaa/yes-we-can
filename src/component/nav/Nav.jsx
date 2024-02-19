@@ -64,6 +64,7 @@ setLoader(true)
     {login ? <Link onClick={clickLogOut} to="/">تسجيل الخروج</Link>:null}  
     {login ? <Link onClick={clickLink} to="/profile">الصفحة الشخصية</Link>:null}   
     {login ? null:<Link  to="/sign-up">التسجيل</Link>}  
+    {login ? <Link  to="/raters">اذهب للاختبار</Link> : null}  
 
     
         <Link to="who">من نحن </Link>

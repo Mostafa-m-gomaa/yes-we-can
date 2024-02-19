@@ -13,6 +13,7 @@ import SignUp from './component/sign-up/SignUp';
 import RaterTest from './component/raterTest/RaterTest';
 import RatersConditions from './component/raters-condition/RatersConditions';
 import Who from './component/who/who';
+import Message from './component/question/message';
 
 
 
@@ -73,6 +74,7 @@ function App() {
      <Route path="/sign-up" element={<SignUp/>}/>
      <Route path="/raters-cond" element={<RatersConditions/>}/>
      <Route path="/who" element={<Who/>}/>
+     <Route path="/msg" element={<Message/>}/>
      <Route path="/raters/:raterEmail/:raterCode" element={<RaterTest/>}/>
 
    </Routes>

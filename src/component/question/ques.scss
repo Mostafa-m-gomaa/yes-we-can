@@ -234,3 +234,18 @@
       }
     }
 }
+
+.my-message{
+  width: 100;
+  min-height: 100vh;
+  
+  .msg-cont{
+    direction: rtl;
+    margin: auto;
+    background-color: var(--my-color);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 150px;
+  }
+}

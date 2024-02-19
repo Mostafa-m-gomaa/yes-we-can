@@ -218,4 +218,36 @@
   transform: scale(1.2);
   border-color: #4c8bf5;
   box-shadow: 0 0 20px rgba(76, 139, 245, 0.5019607843);
+}
+
+.my-message {
+  width: 100;
+  min-height: 100vh;
+}
+.my-message .msg-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  direction: rtl;
+  margin: auto;
+  background-color: var(--my-color);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 150px;
+  a{
+    background-color: rgb(33, 199, 33);
+    padding: 10px 20px;
+  
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: fit-content;
+  }
+  .next{
+    background-color: var(--other-color);
+    padding: 10px 20px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=ques.css.map */
