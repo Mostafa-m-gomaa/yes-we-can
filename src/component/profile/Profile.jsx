@@ -207,10 +207,10 @@ const [showFullReport,setShowFullReport]=useState(false)
       const doc = new jsPDF({
         orientation: 'portrait', // 'portrait' or 'landscape' orientation
         unit: 'mm', // Measurement unit (millimeters)
-        format: ['280', '300'], // Page size defined by width and height
+        format: ['240', '300'], // Page size defined by width and height
       });
       
-    
+     
       doc.addFileToVFS('alfont_com_arial-1.ttf', font);
       doc.addFont('alfont_com_arial-1.ttf', 'alfont_com_arial-1', 'normal');
       doc.setFont("alfont_com_arial-1");
@@ -289,12 +289,18 @@ const [showFullReport,setShowFullReport]=useState(false)
         theme:"grid",
         startY: 100
       });
+      const maxWidth = (doc.internal.pageSize.width * 0.8);
+
+      // Center the image on the page
+      const xPosition = (doc.internal.pageSize.width - maxWidth) / 2;
   
       
       doc.addPage();
       doc.addImage(logo, 'JPEG' , 5,5,40,15)
       // doc.text("مقياس نعم أستطيع", 130, 35);
-      doc.addImage(screenshotImage , 'JPEG' , 5,20 , 220 , 250)
+      doc.addImage(screenshotImage , 'JPEG' , xPosition,20 , maxWidth , 250)
+      // doc.addPage();
+      // doc.addImage(screenshotImage , 'JPEG' , xPosition , 220 , maxWidth)
       doc.addPage();
       doc.addImage(nine, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
       doc.addPage();

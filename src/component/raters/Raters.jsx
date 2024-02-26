@@ -5,15 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Raters = () => {
 
-//     const verifyEmails =(e)=>{
-//         const email1 =sessionStorage.getItem("email1")
-//         const email2 =sessionStorage.getItem("email2")
-//         const email3 =sessionStorage.getItem("email3")
-// if(email1 === email2 || email1 === email3 || email2 === email3){
-//     e.preventDefault()
-//     toast.error("لايمكن تكرار الايميل")
-// }
-//     }
+    const verifyEmails =(e)=>{
+        const email1 =sessionStorage.getItem("email1")
+        const email2 =sessionStorage.getItem("email2")
+        const email3 =sessionStorage.getItem("email3")
+if(email1 === email2 || email1 === email3 || email2 === email3){
+    e.preventDefault()
+    toast.error("لايمكن تكرار الايميل")
+}
+    }
   return (
 <div className="raters">
     <div className="container">
@@ -45,8 +45,9 @@ const Raters = () => {
                 ايميل المقيم الثالث
             </label>
 
-            <Link to="/msg">اذهب للاختبار</Link>
-            <Link  to="/msg">تخطي</Link>
+            <Link to="/msg" onClick={verifyEmails}>اذهب للاختبار</Link>
+            {localStorage.getItem("skip") === "true" ? <Link to="/msg">تخطي</Link> : null}
+            {/* <Link  to="/msg">تخطي</Link> */}
     </div>
 </div>
   )

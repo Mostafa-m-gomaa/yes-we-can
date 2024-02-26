@@ -34,6 +34,7 @@ const Landing = () => {
         localStorage.setItem("userName",response.data.name)
         localStorage.setItem("email",response.data.email)
         localStorage.setItem("userId",response.data._id)
+        localStorage.setItem("skip",response.data.skipRaters)
         setLogin(true)
         history("/raters-cond")
 
@@ -45,6 +46,7 @@ const Landing = () => {
         localStorage.setItem("userName",response.data.name)
         localStorage.setItem("email",response.data.email)
         localStorage.setItem("userId",response.data._id)
+        localStorage.setItem("skip",response.data.skipRaters)
         setLogin(true)
         history("/profile")
       } 

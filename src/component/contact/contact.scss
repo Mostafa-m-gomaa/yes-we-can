@@ -1,0 +1,44 @@
+.contact{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .first-info{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid var(--my-color);
+            border-radius: 15px;
+            padding: 15px 0;
+            align-items: center;
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+             h3{
+                margin: 0;
+             }
+            img{
+                width: 40px;
+            }
+            }
+            a{
+                img{
+                    width: 40px;
+                }
+            }
+        }
+    }
+    h2{
+        text-align: right;
+        margin-top: 140px;
+        font-size: 30px;
+        color: white;
+        padding: 10px 20px;
+        background-color: var(--my-color);
+        border-radius: 10px;
+    }
+}
